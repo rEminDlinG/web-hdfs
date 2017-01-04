@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cgwx.webhdfs.dao.FsImageAdvanceMapper" >
+  <resultMap id="BaseResultMap" type="com.cgwx.webhdfs.model.FsImageAdvance" >
+    <result column="image_id" property="imageId" jdbcType="INTEGER" />
+    <result column="args0" property="args0" jdbcType="INTEGER" />
+    <result column="args1" property="args1" jdbcType="VARCHAR" />
+    <result column="args2" property="args2" jdbcType="VARCHAR" />
+    <result column="args3" property="args3" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.cgwx.webhdfs.model.FsImageAdvance" extends="BaseResultMap" >
+    <result column="args4" property="args4" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Blob_Column_List" >
+    args4
+  </sql>
+  <insert id="insert" parameterType="com.cgwx.webhdfs.model.FsImageAdvance" >
+    insert into fs_image_advance (image_id, args0, args1, 
+      args2, args3, args4
+      )
+    values (#{imageId,jdbcType=INTEGER}, #{args0,jdbcType=INTEGER}, #{args1,jdbcType=VARCHAR}, 
+      #{args2,jdbcType=VARCHAR}, #{args3,jdbcType=VARCHAR}, #{args4,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.cgwx.webhdfs.model.FsImageAdvance" >
+    insert into fs_image_advance
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="imageId != null" >
+        image_id,
+      </if>
+      <if test="args0 != null" >
+        args0,
+      </if>
+      <if test="args1 != null" >
+        args1,
+      </if>
+      <if test="args2 != null" >
+        args2,
+      </if>
+      <if test="args3 != null" >
+        args3,
+      </if>
+      <if test="args4 != null" >
+        args4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="imageId != null" >
+        #{imageId,jdbcType=INTEGER},
+      </if>
+      <if test="args0 != null" >
+        #{args0,jdbcType=INTEGER},
+      </if>
+      <if test="args1 != null" >
+        #{args1,jdbcType=VARCHAR},
+      </if>
+      <if test="args2 != null" >
+        #{args2,jdbcType=VARCHAR},
+      </if>
+      <if test="args3 != null" >
+        #{args3,jdbcType=VARCHAR},
+      </if>
+      <if test="args4 != null" >
+        #{args4,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
