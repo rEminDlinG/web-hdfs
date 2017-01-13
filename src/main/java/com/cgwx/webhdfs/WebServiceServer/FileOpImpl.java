@@ -47,9 +47,20 @@ public class FileOpImpl implements FileOp {
 
         connectNum = 0;
         conf = new Configuration();//这里创建conf对象有一个默认参数，boolean loadDefaults，默认为true
+        String path = this.getClass().getResource("/").getPath().substring(1, this.getClass().getResource("/").getPath().indexOf("classes"));
+        String coreconf = path + "classes/config/core-site.xml";
+        String hdfsconf = path + "classes/config/hdfs-site.xml";
+        String yarnconf = path + "classes/config/yarn-site.xml";
+        String mapredconf = path + "classes/config/mapred-site.xml";
+        conf.addResource(coreconf);
         rootPath = new String("hdfs://10.10.90.111:9000/");
         try {
             coreSys=FileSystem.get(URI.create(rootPath), conf);
+
+            System.out.println(conf.get("fs.defaultFS"));
+            System.out.println(conf.get("hadoop.tmp.dir"));
+            System.out.println(conf.get("mapreduce.task.io.sort.mb"));
+            System.out.println(conf.get("mapreduce.jobhistory.webapp.address"));
         } catch (IOException e) {
             System.out.println("初始化HDFS核心文件对象失败："+e.getLocalizedMessage());
         }
