@@ -135,12 +135,12 @@
 
 <script type="text/javascript" src="/resources/js/static/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="/resources/js/webuploader/webuploader.js"></script>
-
 <script type="text/javascript" src="/resources/js/static/bootstrap-3.0.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/resources/js/static/dust-full-2.0.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/static/dust-helpers-1.1.1.min.js"></script>
 <script type="text/javascript" src="/resources/js/static/dfs-dust.js"></script>
 <script type="text/javascript" src="/resources/js/static/jquery.form.min.js"></script>
+<script type="text/javascript" src="/resources/js/layer/layer.js"></script>
 <script type="text/javascript" src="/resources/js/fileupload.js"></script>
 <script type="text/javascript" >
     function setTypeAttrSelect(){

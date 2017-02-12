@@ -251,8 +251,14 @@
       success: function (data) {
         if(data.result == "success") {
           console.log("success");
+          layer.msg("上传成功");
+          setTimeout("window.location.href='fileupload.jsp'", 3000);
+          //alert("上传成功");
+          //window.location.href="fileupload.jsp";
         }else {
           console.log("failed");
+          layer.alert("上传失败");
+          //alert("上传失败");
         }
       }
     });

@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+import com.cgwx.webhdfs.dto.Response;
 @Controller
 @RequestMapping("/FileInfoSubmit")
 public class FileInfoSubmitController {
@@ -30,7 +30,9 @@ public class FileInfoSubmitController {
     private IImageDailyService imageDailyService;
     @ResponseBody
     @RequestMapping("/SubmitAction")
-    public void SubmitInfos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public Response SubmitInfos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        Response opResult = new Response();
 
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
@@ -74,7 +76,9 @@ public class FileInfoSubmitController {
             fsImageDaily.setArgs1("typeAttr");
             result = imageDailyService.insert(fsImageDaily);
             System.out.println(result);
-        }
 
+        }
+        opResult.setResult("success");
+        return opResult;
     }
 }
