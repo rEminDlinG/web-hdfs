@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cgwx.webhdfs.dao.mysql.FsImageUploadMapper" >
+  <resultMap id="BaseResultMap" type="com.cgwx.webhdfs.model.mysql.FsImageUpload" >
+    <id column="image_id" property="imageId" jdbcType="INTEGER" />
+    <result column="upload_user_id" property="uploadUserId" jdbcType="VARCHAR" />
+    <result column="upload_user_name" property="uploadUserName" jdbcType="VARCHAR" />
+    <result column="image_upload_time" property="imageUploadTime" jdbcType="TIMESTAMP" />
+    <result column="image_category" property="imageCategory" jdbcType="VARCHAR" />
+    <result column="image_path" property="imagePath" jdbcType="VARCHAR" />
+    <result column="cut_state" property="cutState" jdbcType="VARCHAR" />
+    <result column="level_min" property="levelMin" jdbcType="INTEGER" />
+    <result column="level_max" property="levelMax" jdbcType="INTEGER" />
+    <result column="image_capture_time" property="imageCaptureTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.cgwx.webhdfs.model.mysql.FsImageUpload" extends="BaseResultMap" >
+    <result column="image_description" property="imageDescription" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    image_id, upload_user_id, upload_user_name, image_upload_time, image_category, image_path, 
+    cut_state, level_min, level_max, image_capture_time
+  </sql>
+  <sql id="Blob_Column_List" >
+    image_description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from fs_image_upload
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from fs_image_upload
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cgwx.webhdfs.model.mysql.FsImageUpload" >
+    insert into fs_image_upload (image_id, upload_user_id, upload_user_name, 
+      image_upload_time, image_category, image_path, 
+      cut_state, level_min, level_max, 
+      image_capture_time, image_description
+      )
+    values (#{imageId,jdbcType=INTEGER}, #{uploadUserId,jdbcType=VARCHAR}, #{uploadUserName,jdbcType=VARCHAR}, 
+      #{imageUploadTime,jdbcType=TIMESTAMP}, #{imageCategory,jdbcType=VARCHAR}, #{imagePath,jdbcType=VARCHAR}, 
+      #{cutState,jdbcType=VARCHAR}, #{levelMin,jdbcType=INTEGER}, #{levelMax,jdbcType=INTEGER}, 
+      #{imageCaptureTime,jdbcType=TIMESTAMP}, #{imageDescription,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.cgwx.webhdfs.model.mysql.FsImageUpload" >
+    insert into fs_image_upload
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="imageId != null" >
+        image_id,
+      </if>
+      <if test="uploadUserId != null" >
+        upload_user_id,
+      </if>
+      <if test="uploadUserName != null" >
+        upload_user_name,
+      </if>
+      <if test="imageUploadTime != null" >
+        image_upload_time,
+      </if>
+      <if test="imageCategory != null" >
+        image_category,
+      </if>
+      <if test="imagePath != null" >
+        image_path,
+      </if>
+      <if test="cutState != null" >
+        cut_state,
+      </if>
+      <if test="levelMin != null" >
+        level_min,
+      </if>
+      <if test="levelMax != null" >
+        level_max,
+      </if>
+      <if test="imageCaptureTime != null" >
+        image_capture_time,
+      </if>
+      <if test="imageDescription != null" >
+        image_description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="imageId != null" >
+        #{imageId,jdbcType=INTEGER},
+      </if>
+      <if test="uploadUserId != null" >
+        #{uploadUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadUserName != null" >
+        #{uploadUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUploadTime != null" >
+        #{imageUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageCategory != null" >
+        #{imageCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="imagePath != null" >
+        #{imagePath,jdbcType=VARCHAR},
+      </if>
+      <if test="cutState != null" >
+        #{cutState,jdbcType=VARCHAR},
+      </if>
+      <if test="levelMin != null" >
+        #{levelMin,jdbcType=INTEGER},
+      </if>
+      <if test="levelMax != null" >
+        #{levelMax,jdbcType=INTEGER},
+      </if>
+      <if test="imageCaptureTime != null" >
+        #{imageCaptureTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageDescription != null" >
+        #{imageDescription,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cgwx.webhdfs.model.mysql.FsImageUpload" >
+    update fs_image_upload
+    <set >
+      <if test="uploadUserId != null" >
+        upload_user_id = #{uploadUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadUserName != null" >
+        upload_user_name = #{uploadUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUploadTime != null" >
+        image_upload_time = #{imageUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageCategory != null" >
+        image_category = #{imageCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="imagePath != null" >
+        image_path = #{imagePath,jdbcType=VARCHAR},
+      </if>
+      <if test="cutState != null" >
+        cut_state = #{cutState,jdbcType=VARCHAR},
+      </if>
+      <if test="levelMin != null" >
+        level_min = #{levelMin,jdbcType=INTEGER},
+      </if>
+      <if test="levelMax != null" >
+        level_max = #{levelMax,jdbcType=INTEGER},
+      </if>
+      <if test="imageCaptureTime != null" >
+        image_capture_time = #{imageCaptureTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageDescription != null" >
+        image_description = #{imageDescription,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.cgwx.webhdfs.model.mysql.FsImageUpload" >
+    update fs_image_upload
+    set upload_user_id = #{uploadUserId,jdbcType=VARCHAR},
+      upload_user_name = #{uploadUserName,jdbcType=VARCHAR},
+      image_upload_time = #{imageUploadTime,jdbcType=TIMESTAMP},
+      image_category = #{imageCategory,jdbcType=VARCHAR},
+      image_path = #{imagePath,jdbcType=VARCHAR},
+      cut_state = #{cutState,jdbcType=VARCHAR},
+      level_min = #{levelMin,jdbcType=INTEGER},
+      level_max = #{levelMax,jdbcType=INTEGER},
+      image_capture_time = #{imageCaptureTime,jdbcType=TIMESTAMP},
+      image_description = #{imageDescription,jdbcType=LONGVARCHAR}
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cgwx.webhdfs.model.mysql.FsImageUpload" >
+    update fs_image_upload
+    set upload_user_id = #{uploadUserId,jdbcType=VARCHAR},
+      upload_user_name = #{uploadUserName,jdbcType=VARCHAR},
+      image_upload_time = #{imageUploadTime,jdbcType=TIMESTAMP},
+      image_category = #{imageCategory,jdbcType=VARCHAR},
+      image_path = #{imagePath,jdbcType=VARCHAR},
+      cut_state = #{cutState,jdbcType=VARCHAR},
+      level_min = #{levelMin,jdbcType=INTEGER},
+      level_max = #{levelMax,jdbcType=INTEGER},
+      image_capture_time = #{imageCaptureTime,jdbcType=TIMESTAMP}
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </update>
+</mapper>

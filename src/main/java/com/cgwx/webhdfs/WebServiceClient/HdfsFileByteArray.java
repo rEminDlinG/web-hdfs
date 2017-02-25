@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>hdfsFileByteArray complex type锟斤拷 Java 锟洁。
+ * <p>hdfsFileByteArray complex type的 Java 类。
  * 
- * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="hdfsFileByteArray">
@@ -37,7 +37,7 @@ public class HdfsFileByteArray {
     protected byte[] fileBuffer;
 
     /**
-     * 锟斤拷取fileLength锟斤拷锟皆碉拷值锟斤拷
+     * 获取fileLength属性的值。
      * 
      */
     public long getFileLength() {
@@ -45,7 +45,7 @@ public class HdfsFileByteArray {
     }
 
     /**
-     * 锟斤拷锟斤拷fileLength锟斤拷锟皆碉拷值锟斤拷
+     * 设置fileLength属性的值。
      * 
      */
     public void setFileLength(long value) {
@@ -53,7 +53,7 @@ public class HdfsFileByteArray {
     }
 
     /**
-     * 锟斤拷取fileBuffer锟斤拷锟皆碉拷值锟斤拷
+     * 获取fileBuffer属性的值。
      * 
      * @return
      *     possible object is
@@ -64,7 +64,7 @@ public class HdfsFileByteArray {
     }
 
     /**
-     * 锟斤拷锟斤拷fileBuffer锟斤拷锟皆碉拷值锟斤拷
+     * 设置fileBuffer属性的值。
      * 
      * @param value
      *     allowed object is

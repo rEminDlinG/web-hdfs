@@ -3,17 +3,14 @@ package com.cgwx.webhdfs.service;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
-import com.cgwx.webhdfs.model.tif_schema;
+import com.cgwx.webhdfs.model.mysql.tif_schema;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import com.alibaba.fastjson.JSON;
 
 /**
  * 创建时间：2015-1-27 下午10:45:38

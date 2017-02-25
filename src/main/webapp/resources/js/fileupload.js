@@ -251,8 +251,14 @@
       success: function (data) {
         if(data.result == "success") {
           console.log("success");
+          layer.alert("上传成功");
+          setTimeout("window.location.href='fileupload.jsp'", 2000);
+          //alert("上传成功");
+          //window.location.href="fileupload.jsp";
         }else {
           console.log("failed");
+          layer.alert("上传失败");
+          //alert("上传失败");
         }
       }
     });
@@ -287,8 +293,10 @@
       //auto : true,
       resize: false,
       swf: '/resources/js/webuploader/Uploader.swf',
-      server: '/FileUpload',
+      //server: '/FileUpload',
+      server: '/NewFileUpload/upload.htmls',
       pick: '#picker',
+      timeout: 60*60*1000,
       accept: {
         title: 'Images',
         extensions: 'gif,jpg,jpeg,bmp,png,tif',

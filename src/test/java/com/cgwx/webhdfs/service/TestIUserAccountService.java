@@ -1,6 +1,6 @@
 package com.cgwx.webhdfs.service;
 
-import com.cgwx.webhdfs.model.FsUserAccount;
+import com.cgwx.webhdfs.model.mysql.FsUserAccount;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,9 +12,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by hadoop on 2017/1/1.
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:spring.xml",
         "classpath:spring-mybatis.xml" })
@@ -24,7 +21,6 @@ public class TestIUserAccountService {
 
     @Autowired
     private IUserAccountService userAccountService;
-
     @Test
     public void testInsert() {
         Date date=new Date();

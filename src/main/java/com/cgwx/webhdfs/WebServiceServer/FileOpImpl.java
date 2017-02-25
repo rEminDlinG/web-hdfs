@@ -1,15 +1,11 @@
 package com.cgwx.webhdfs.WebServiceServer;;
-import java.io.BufferedOutputStream;
+import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,7 +17,6 @@ import org.apache.hadoop.fs.FSDataInputStream;
 
 
 import org.apache.hadoop.fs.FSDataOutputStream;
-import java.io.FileOutputStream;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.BlockLocation;
 import org.apache.hadoop.fs.FSDataOutputStream;
@@ -31,11 +26,12 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.hdfs.DistributedFileSystem;
 import org.apache.hadoop.hdfs.protocol.DatanodeInfo;
 import org.apache.hadoop.io.IOUtils;
+import org.springframework.stereotype.Component;
 //import org.junit.Before;
 //import org.junit.Test;
 import javax.xml.ws.Endpoint;
-@WebService(endpointInterface="com.cgwx.webhdfs.WebServiceServer.FileOp",serviceName="FileOp")
-
+@Component
+@WebService(serviceName="FileOpService",endpointInterface="com.cgwx.webhdfs.WebServiceServer.FileOp")
 public class FileOpImpl implements FileOp {
 
     Configuration conf = null;
@@ -65,6 +61,7 @@ public class FileOpImpl implements FileOp {
             System.out.println("初始化HDFS核心文件对象失败："+e.getLocalizedMessage());
         }
     }
+    @WebMethod
     public boolean createDirOnHDFS(String addDir)throws IOException{
 
         Path demoDir=new Path(rootPath+addDir);
@@ -73,8 +70,8 @@ public class FileOpImpl implements FileOp {
         System.out.println(isSuccess?"目录创建成功！":"目录创建失败!");
         return isSuccess;
     }
+    @WebMethod
     public boolean createFile(String fileName,String dirName,String fileContent) throws IOException{
-
         Path filePath = new Path(rootPath + dirName + fileName);
         FSDataOutputStream fileOutput = coreSys.create(filePath);
         BufferedOutputStream bout = new BufferedOutputStream(fileOutput);
@@ -84,6 +81,21 @@ public class FileOpImpl implements FileOp {
         System.out.println("文件创建完毕！");
         return true;
     }
+    /*public boolean createFile(File localPath, String hdfsPath) throws IOException{
+        InputStream in = null;
+        try {
+            FSDataOutputStream out = coreSys.create(new Path(hdfsPath));
+            in = new BufferedInputStream(new FileInputStream(localPath));
+            IOUtils.copyBytes(in, out, 4096, false);
+            out.hsync();
+            out.close();
+            System.out.println("create file in hdfs:" + hdfsPath);
+        } finally {
+            IOUtils.closeStream(in);
+        }
+        return true;
+    }*/
+    @WebMethod
     public boolean uploadFile(String localFileName,String remoteFilePath)throws IOException{
         System.out.println("收到webservive请求:uploadFile");
         System.out.println(localFileName + "::" + remoteFilePath);
@@ -98,6 +110,7 @@ public class FileOpImpl implements FileOp {
         }
         return true;
     }
+    @WebMethod
     public boolean downloadFile(String localFileName,String remoteFilePath)throws IOException {
         System.out.println("收到webservive请求:downloadFile");
         Path remotePath = new Path(rootPath + remoteFilePath);
@@ -108,6 +121,7 @@ public class FileOpImpl implements FileOp {
         coreSys.copyToLocalFile(remotePath,localPath);
         return true;
     }
+    @WebMethod
     public boolean renameFile(String oriFileName,String newFileName)throws IOException{
         Path oldFileName=new Path(rootPath+oriFileName);
         Path newfileName=new Path(rootPath+newFileName);
@@ -115,6 +129,7 @@ public class FileOpImpl implements FileOp {
         System.out.println(isSuccess?"重命名成功！":"重命名失败！");
         return true;
     }
+    @WebMethod
     public boolean deleteFile(String fileName)throws IOException{
         Path deleteFile=new Path(rootPath+fileName);
         boolean isSuccess=coreSys.delete(deleteFile, false);
@@ -128,6 +143,7 @@ public class FileOpImpl implements FileOp {
         System.out.println(isExit?"文件存在!":"文件不存在！");
         return isExit;
     }
+    @WebMethod
     public boolean watchFileLastModifyTime(String fileName)throws IOException{
         Path targetFile=new Path(rootPath+fileName);
         FileStatus fileStatus=coreSys.getFileStatus(targetFile);
@@ -137,6 +153,7 @@ public class FileOpImpl implements FileOp {
         System.err.println("文件的最后修改时间为:"+format.format(date));
         return true;
     }
+    @WebMethod
     public boolean getUnderDirAllFile(String dirName)throws IOException{
         Path targetDir=new Path(rootPath+dirName);
         FileStatus []fileStatus=coreSys.listStatus(targetDir);
@@ -145,6 +162,7 @@ public class FileOpImpl implements FileOp {
         }
         return true;
     }
+    @WebMethod
     public boolean findLocationOnHadoop(String fileName)throws IOException{
         Path targetFile=new Path(rootPath+fileName);
         FileStatus fileStaus  = coreSys.getFileStatus(targetFile);
@@ -154,6 +172,7 @@ public class FileOpImpl implements FileOp {
         }
         return true;
     }
+    @WebMethod
     public boolean getNodeMsgHdfs()throws IOException{
         connectNum++;
         SimpleDateFormat time=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -166,6 +185,7 @@ public class FileOpImpl implements FileOp {
         }
         return true;
     }
+    @WebMethod
     public HDFSFileByteArray loadFile(String fileName)throws IOException{
         connectNum++;
 
@@ -173,17 +193,22 @@ public class FileOpImpl implements FileOp {
         System.out.println(time.format(new java.util.Date())+"  loadFile请求:"+fileName + "       次数："+ connectNum);
         HDFSFileByteArray fba = new HDFSFileByteArray();
         //InputStream in = coreSys.open(new Path(rootPath + fileName));
-        FSDataInputStream in = coreSys.open(new Path(rootPath + fileName));
-        FileStatus fileStatus = coreSys.getFileStatus(new Path(rootPath + fileName));
-        fba.fileLength = fileStatus.getLen();
-        fba.fileBuffer = new byte[(int)fba.fileLength];
-        int readCount = 0; // 已经成功读取的字节的个数
-        while (readCount < fba.fileLength) {
-            readCount += in.read(fba.fileBuffer, readCount, (int)(fba.fileLength - readCount));
+        try {
+            FSDataInputStream in = coreSys.open(new Path(rootPath + fileName));
+            FileStatus fileStatus = coreSys.getFileStatus(new Path(rootPath + fileName));
+            fba.fileLength = fileStatus.getLen();
+            fba.fileBuffer = new byte[(int)fba.fileLength];
+            int readCount = 0; // 已经成功读取的字节的个数
+            while (readCount < fba.fileLength) {
+                readCount += in.read(fba.fileBuffer, readCount, (int)(fba.fileLength - readCount));
+            }
+            in.close();
+        } catch (IOException e) {
+            System.out.println(time.format(new java.util.Date())+"  loadFile请求:"+fileName + "       失败，HDFS系统中不存在该文件！");
         }
-        in.close();
         return fba;
     }
+    @WebMethod
     public boolean getFileMetaData(String fileName)throws IOException{
 
         return true;}

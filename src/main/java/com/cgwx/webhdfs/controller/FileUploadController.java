@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URI;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,7 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.ws.WebServiceClient;
+
 
 
 import com.cgwx.webhdfs.WebServiceClient.*;
@@ -21,6 +22,10 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataOutputStream;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
 
 @WebServlet("/FileUpload")
 public class FileUploadController extends HttpServlet {
@@ -57,13 +62,19 @@ public class FileUploadController extends HttpServlet {
                 if (item.isFormField()) {
                     String name = item.getFieldName();
                     String value = item.getString("utf-8");
-
                     System.out.println(name + ": " + value);
                     remotePath = value;
-
                 }
                 // 若是文件域则把文件保存到 e:\\files 目录下.
                 else {
+                    Configuration conf = new Configuration();
+                    String hdfsPath = "hdfs://10.10.90.111:9000/user/hadoop/uploadFiles/" + fileName;
+                    FileSystem fileSystem = FileSystem.get(URI.create(hdfsPath), conf);
+                    FSDataOutputStream fsout = fileSystem.create(new Path(hdfsPath));
+
+
+
+
                     fileName = item.getName();
                     long sizeInBytes = item.getSize();
                     System.out.println("文件名称：" + fileName + "   文件大小(字节)：" + sizeInBytes);
@@ -79,16 +90,22 @@ public class FileUploadController extends HttpServlet {
 
                     while ((len = in.read(buffer)) != -1) {
                         out.write(buffer, 0, len);
+                        fsout.write(buffer, 0, buffer.length);
                     }
-
+                    fsout.hsync();
+                    fsout.close();
                     out.close();
                     in.close();
+
+
+
                 }
             }
             remotePath = "/user/hadoop/uploadFiles/" + fileName;
             //加入上传至HDFS的代码
             System.out.println("文件加载至本地成功，开始上传至HDFS......");
-            FileOp_Service fileOpService = new FileOp_Service();
+
+            FileOpService fileOpService = new FileOpService();
 
             FileOp fileOp = fileOpService.getPort(FileOp.class);
             try {
@@ -100,6 +117,7 @@ public class FileUploadController extends HttpServlet {
             } catch (IOException_Exception e) {
                 e.printStackTrace();
             }
+
         } catch (FileUploadException e) {
             e.printStackTrace();
         }

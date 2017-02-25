@@ -2,8 +2,8 @@ package com.cgwx.webhdfs.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.cgwx.webhdfs.dao.FsUserAccountMapper;
-import com.cgwx.webhdfs.model.FsUserAccount;
+import com.cgwx.webhdfs.dao.mysql.FsUserAccountMapper;
+import com.cgwx.webhdfs.model.mysql.FsUserAccount;
 
 @Service
 public class UserAccountServiceImpl implements IUserAccountService{

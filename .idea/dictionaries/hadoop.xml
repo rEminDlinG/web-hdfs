@@ -1,8 +1,10 @@
 <component name="ProjectDictionaryState">
   <dictionary name="hadoop">
     <words>
+      <w>hdfs</w>
       <w>infos</w>
       <w>tempupload</w>
+      <w>testfilepath</w>
     </words>
   </dictionary>
 </component>

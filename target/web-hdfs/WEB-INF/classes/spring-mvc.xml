@@ -44,16 +44,20 @@
 
     <!-- 配置多文件上传 -->
     <bean id="multipartResolver"
-          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+    >
         <property name="defaultEncoding">
             <value>UTF-8</value>
         </property>
         <property name="maxUploadSize">
-            <!-- 上传文件大小限制为10GB， -->
-            <value>10737418240</value>
+            <!-- 上传文件大小限制为400GB， -->
+            <value>429496729600</value>
         </property>
         <property name="maxInMemorySize">
             <value>4096</value>
+        </property>
+        <property name="uploadTempDir">
+            <value>uploadfile/temp/</value>
         </property>
     </bean>
 
