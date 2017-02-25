@@ -39,9 +39,9 @@
     <li><a href="#tab-datanode-volume-failures">Datanode Volume Failures</a></li>
     <li><a href="#tab-snapshot">Snapshot</a></li>
     <li><a href="#tab-startup-progress">Startup Progress</a></li>
-    <li><a href="explorer.html">Browse the file system</a></li>
+    <li><a href="explorer.jsp">Browse the file system</a></li>
     <li><a href="logs">Logs</a></li>
-    <li><a href="fileupload.html">Upload local files</a></li>
+    <li><a href="fileupload-group.jsp">Upload local files</a></li>
     <!--<li class="dropdown">-->
       <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Utilities <b class="caret"></b></a>-->
       <!--<ul class="dropdown-menu">-->

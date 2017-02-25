@@ -47,7 +47,7 @@
             <li><a href="dfshealth.jsp#tab-startup-progress">启动过程</a></li>
             <li><a href="explorer.jsp">HDFS文件系统</a></li>
             <li><a href="logs">日志</a></li>
-            <li><a href="fileupload.jsp">文件上传</a></li>
+            <li><a href="fileupload-group.jsp">文件上传</a></li>
         </ul>
     </div>
 </header>
@@ -57,7 +57,8 @@
         <p>1、支持图像类型格式包括:gif,jpg,jpeg,bmp,png,tif。</p>
         <p>2、请先选择要上传的图像，并点击开始上传；随后填写下方表单。</p>
         <p>3、界面提示上传成功后，方可提交表单信息。</p>
-        <p>4、每次操作只可以上传一张图像。</p>
+        <p>4、成组上传+单一图片上传。</p>
+        <p>5、每次操作只可以上传一张图像。</p>
     </div>
 
     <div id="uploader" class="wu-example">

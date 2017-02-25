@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cgwx.webhdfs.dao.mysql.tif_schemaMapper" >
+  <resultMap id="BaseResultMap" type="com.cgwx.webhdfs.model.mysql.tif_schema" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="path" property="path" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="level_min" property="levelMin" jdbcType="INTEGER" />
+    <result column="level_max" property="levelMax" jdbcType="INTEGER" />
+    <result column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="flag" property="flag" jdbcType="BIT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.cgwx.webhdfs.model.mysql.tif_schema" extends="BaseResultMap" >
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, path, type, level_min, level_max, date, flag
+  </sql>
+  <sql id="Blob_Column_List" >
+    description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tif_schema
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tif_schema
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.cgwx.webhdfs.model.mysql.tif_schema" >
+    insert into tif_schema (id, path, type, 
+      level_min, level_max, date, 
+      flag, description)
+    values (#{id,jdbcType=VARCHAR}, #{path,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{levelMin,jdbcType=INTEGER}, #{levelMax,jdbcType=INTEGER}, #{date,jdbcType=TIMESTAMP}, 
+      #{flag,jdbcType=BIT}, #{description,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cgwx.webhdfs.model.mysql.tif_schema" >
+    insert into tif_schema
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="path != null" >
+        path,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="levelMin != null" >
+        level_min,
+      </if>
+      <if test="levelMax != null" >
+        level_max,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="flag != null" >
+        flag,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="path != null" >
+        #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="levelMin != null" >
+        #{levelMin,jdbcType=INTEGER},
+      </if>
+      <if test="levelMax != null" >
+        #{levelMax,jdbcType=INTEGER},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flag != null" >
+        #{flag,jdbcType=BIT},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cgwx.webhdfs.model.mysql.tif_schema" >
+    update tif_schema
+    <set >
+      <if test="path != null" >
+        path = #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="levelMin != null" >
+        level_min = #{levelMin,jdbcType=INTEGER},
+      </if>
+      <if test="levelMax != null" >
+        level_max = #{levelMax,jdbcType=INTEGER},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flag != null" >
+        flag = #{flag,jdbcType=BIT},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.cgwx.webhdfs.model.mysql.tif_schema" >
+    update tif_schema
+    set path = #{path,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      level_min = #{levelMin,jdbcType=INTEGER},
+      level_max = #{levelMax,jdbcType=INTEGER},
+      date = #{date,jdbcType=TIMESTAMP},
+      flag = #{flag,jdbcType=BIT},
+      description = #{description,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cgwx.webhdfs.model.mysql.tif_schema" >
+    update tif_schema
+    set path = #{path,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      level_min = #{levelMin,jdbcType=INTEGER},
+      level_max = #{levelMax,jdbcType=INTEGER},
+      date = #{date,jdbcType=TIMESTAMP},
+      flag = #{flag,jdbcType=BIT}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

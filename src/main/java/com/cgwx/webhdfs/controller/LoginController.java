@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 import com.cgwx.webhdfs.service.IUserAccountService;
-import com.cgwx.webhdfs.model.FsUserAccount;
+import com.cgwx.webhdfs.model.mysql.FsUserAccount;
 /**
  * Created by hadoop on 2017/1/1.
  */

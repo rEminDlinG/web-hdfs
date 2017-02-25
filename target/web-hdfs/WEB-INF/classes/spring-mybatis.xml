@@ -12,11 +12,11 @@
 		">
 
     <!-- 配置数据源 使用的是Druid数据源 -->
-    <bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+    <bean id="dataSource"  class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
-        <property name="url" value="${jdbc.url}" />
-        <property name="username" value="${jdbc.username}" />
-        <property name="password" value="${jdbc.password}" />
+        <property name="url" value="${mysql.jdbc.url}" />
+        <property name="username" value="${mysql.jdbc.username}" />
+        <property name="password" value="${mysql.jdbc.password}" />
 
         <!-- 初始化连接大小 -->
         <property name="initialSize" value="0" />
@@ -48,16 +48,15 @@
         <!-- 监控数据库 -->
         <property name="filters" value="mergeStat" />
     </bean>
-
-    <!-- myBatis文件 -->
+    <!-- myBatis文件 定义SqlSessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-        <property name="mapperLocations" value="classpath:com/cgwx/webhdfs/mapper/*.xml" />
+        <property name="mapperLocations" value="classpath:com/cgwx/webhdfs/mapper/mysql/Fs*.xml" />
     </bean>
-
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.cgwx.webhdfs.dao" />
+    <!-- myBatis文件 定义mapper扫描 -->
+    <bean id="mysqlscannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.cgwx.webhdfs.dao.mysql" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
 
@@ -66,6 +65,53 @@
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
+
+
+    <!--  postgresql -->
+    <bean id="postgresqlDataSource"  class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="url" value="${postgresql.jdbc.url}" />
+        <property name="username" value="${postgresql.jdbc.username}" />
+        <property name="password" value="${postgresql.jdbc.password}" />
+        <property name="initialSize" value="0" />
+        <property name="maxActive" value="20" />
+        <!-- 连接池最小空闲 -->
+        <property name="minIdle" value="0" />
+        <!-- 获取连接最大等待时间 -->
+        <property name="maxWait" value="60000" />
+        <property name="poolPreparedStatements" value="true" />
+        <property name="maxPoolPreparedStatementPerConnectionSize"
+                  value="33" />
+        <!-- 用来检测有效sql -->
+        <property name="validationQuery" value="${validationQuery}" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        <property name="testWhileIdle" value="true" />
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="25200000" />
+        <!-- 打开removeAbandoned功能 -->
+        <property name="removeAbandoned" value="true" />
+        <!-- 1800秒，也就是30分钟 -->
+        <property name="removeAbandonedTimeout" value="1800" />
+        <!-- 关闭abanded连接时输出错误日志 -->
+        <property name="logAbandoned" value="true" />
+        <!-- 监控数据库 -->
+        <property name="filters" value="mergeStat" />
+    </bean>
+
+    <bean id="postgresqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="postgresqlDataSource" />
+        <property name="mapperLocations" value="classpath:com/cgwx/webhdfs/mapper/postgresql/Hdfs*.xml" />
+    </bean>
+
+    <bean id="postgresqlscannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.cgwx.webhdfs.dao.postgresql" />
+        <property name="sqlSessionFactoryBeanName" value="postgresqlSessionFactory" />
+    </bean>
+
+
 
     <!-- 注解方式配置事物 -->
     <!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->

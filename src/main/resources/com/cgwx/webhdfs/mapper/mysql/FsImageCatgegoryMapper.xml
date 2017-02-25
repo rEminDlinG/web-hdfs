@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cgwx.webhdfs.dao.mysql.FsImageCatgegoryMapper" >
+  <resultMap id="BaseResultMap" type="com.cgwx.webhdfs.model.mysql.FsImageCatgegory" >
+    <result column="image_category_id" property="imageCategoryId" jdbcType="VARCHAR" />
+    <result column="par_image_category_id" property="parImageCategoryId" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.cgwx.webhdfs.model.mysql.FsImageCatgegory" >
+    insert into fs_image_catgegory (image_category_id, par_image_category_id, 
+      name)
+    values (#{imageCategoryId,jdbcType=VARCHAR}, #{parImageCategoryId,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cgwx.webhdfs.model.mysql.FsImageCatgegory" >
+    insert into fs_image_catgegory
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="imageCategoryId != null" >
+        image_category_id,
+      </if>
+      <if test="parImageCategoryId != null" >
+        par_image_category_id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="imageCategoryId != null" >
+        #{imageCategoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="parImageCategoryId != null" >
+        #{parImageCategoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

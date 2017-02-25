@@ -40,7 +40,7 @@
             <li><a href="dfshealth.jsp#tab-startup-progress">启动过程</a></li>
             <li><a href="explorer.jsp">HDFS文件系统</a></li>
             <li><a href="logs">日志</a></li>
-            <li><a href="fileupload.jsp">文件上传</a></li>
+            <li><a href="fileupload-group.jsp">文件上传</a></li>
         </ul>
     </div>
 </header>

@@ -1,6 +1,6 @@
 package com.cgwx.webhdfs.service;
 
-import com.cgwx.webhdfs.model.tif_schema;
+import com.cgwx.webhdfs.model.mysql.tif_schema;
 /**
  * Created by hadoop on 2016/12/30.
  */

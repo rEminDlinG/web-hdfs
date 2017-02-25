@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
 
@@ -8,7 +8,7 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring.xml,classpath:spring-mybatis.xml</param-value>
+    <param-value>classpath:spring.xml,classpath:spring-mybatis.xml,classpath:spring-jaxws.xml</param-value>
   </context-param>
 
   <filter>
@@ -38,10 +38,11 @@
   </listener>
 
   <!--WebService-->
+  <!--
   <listener>
     <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
   </listener>
-
+  -->
   <servlet>
     <description>spring mvc servlet</description>
     <servlet-name>rest</servlet-name>
@@ -62,6 +63,7 @@
     <servlet-name>rest</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  <!--
   <servlet>
     <description>JAX-WS endpoint</description>
     <display-name>WSServlet</display-name>
@@ -69,10 +71,18 @@
     <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
     <load-on-startup>0</load-on-startup>
   </servlet>
+  -->
+  <!--  WebServices -->
+  <!--
   <servlet-mapping>
     <servlet-name>WSServlet</servlet-name>
     <url-pattern>/services/FileOp</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WSServlet</servlet-name>
+    <url-pattern>/services/QueryOp</url-pattern>
+  </servlet-mapping>
+  -->
 
   <!-- 配置session超时时间，单位分钟 -->
   <session-config>

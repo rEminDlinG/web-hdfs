@@ -3,8 +3,8 @@ package com.cgwx.webhdfs.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.cgwx.webhdfs.dao.FsImageDailyMapper;
-import com.cgwx.webhdfs.model.FsImageDaily;
+import com.cgwx.webhdfs.dao.mysql.FsImageDailyMapper;
+import com.cgwx.webhdfs.model.mysql.FsImageDaily;
 /**
  * Created by hadoop on 2017/1/3.
  */
