@@ -2,368 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3639b851-579a-4433-aa92-c1da0ab6b1ce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jaxen_jaxen_1_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jdom_jdom_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_9_4_1201_jdbc41.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_0_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ws_spring_ws_core_2_3_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ws_spring_xml_2_3_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/Utils/HdfsFileSystem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceServer/QueryOp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceServer/QueryOpImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/controller/NewFileUploadController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/postgresql/ImageStruct.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/IImageStoreService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/ImageStoreServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring-jaxws.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/cgwx/webhdfs/service/TestIImageStoreService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/cgwx/webhdfs/service/TestIImageUploadService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/cgwx/webhdfs/service/TestJasonOp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/cgwx/webhdfs/service/TestQueryOpWebService.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_org_apache_xml_internal_resolver_20050927.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_10_b140802_1033.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_messaging_saaj_saaj_impl_1_3_25.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_stream_buffer_streambuffer_1_5_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_ws_jaxws_rt_2_2_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_ws_policy_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2_b03.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jws_jsr181_api_1_0_MR1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_soap_javax_xml_soap_api_1_3_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_ws_jaxws_api_2_2_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_external_management_api_3_0_0_b012.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_gmbal_gmbal_api_only_3_1_0_b001.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_ha_ha_api_3_1_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_mimepull_mimepull_1_9_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFS.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFSResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFSResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/CreateFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/CreateFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/CreateFileResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/CreateFileResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/DeleteFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/DeleteFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/DeleteFileResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/DeleteFileResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/DownloadFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/DownloadFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/DownloadFileResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/DownloadFileResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FileOp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FileOp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FileOp.wsdl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FileOp_Service.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FileOp_Service.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FindFileIsExit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FindFileIsExit.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FindFileIsExitResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FindFileIsExitResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoop.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoopResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoopResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetFileMetaData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetFileMetaData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetFileMetaDataResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetFileMetaDataResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfs.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfsResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfsResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFileResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFileResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/HdfsFileByteArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/HdfsFileByteArray.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/IOException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/IOException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/IOException_Exception.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/IOException_Exception.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/LoadFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/LoadFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/LoadFileResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/LoadFileResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/ObjectFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/ObjectFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/RenameFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/RenameFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/RenameFileResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/RenameFileResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/UploadFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/UploadFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/UploadFileResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/UploadFileResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTime.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTime.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTimeResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTimeResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/package-info.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceClient/package-info.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sun-jaxws.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FileOp_Service.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/FsImageAdvanceMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/FsImageCatgegoryMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/FsImageDailyMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/FsImageOtherMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/FsImageStandardMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/FsImageTilecutMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/FsImageUploadMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/FsUserAccountMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/dao/tif_schemaMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/FsImageAdvanceMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/FsImageCatgegoryMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/FsImageDailyMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/FsImageOtherMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/FsImageStandardMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/FsImageTilecutMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/FsImageUploadMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/FsUserAccountMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/mapper/tif_schemaMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/FsImageAdvance.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/FsImageCatgegory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/FsImageDaily.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/FsImageOther.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/FsImageStandard.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/FsImageTilecut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/FsImageUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/FsUserAccount.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/model/tif_schema.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FileOp_Service.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/FsImageAdvanceMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/FsImageCatgegoryMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/FsImageDailyMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/FsImageOtherMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/FsImageStandardMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/FsImageTilecutMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/FsImageUploadMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/FsUserAccountMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/dao/tif_schemaMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/FsImageAdvanceMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/FsImageCatgegoryMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/FsImageDailyMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/FsImageOtherMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/FsImageStandardMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/FsImageTilecutMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/FsImageUploadMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/FsUserAccountMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/mapper/tif_schemaMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/FsImageAdvance.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/FsImageCatgegory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/FsImageDaily.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/FsImageOther.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/FsImageStandard.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/FsImageTilecut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/FsImageUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/FsUserAccount.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/model/tif_schema.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/FastInfoset-1.2.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/commons-beanutils-1.7.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/commons-collections-3.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/commons-lang-2.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/gmbal-api-only-3.1.0-b001.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/ha-api-3.1.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/javax.annotation-api-1.2-b03.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/javax.xml.soap-api-1.3.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/jaxb-api-2.2.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/jaxb-core-2.2.10-b140802.1033.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/jaxb-impl-2.2.10-b140802.1033.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/jaxws-api-2.2.11.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/jaxws-rt-2.2.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/jsr181-api-1.0-MR1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/management-api-3.0.0-b012.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/mimepull-1.9.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/policy-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/resolver-20050927.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/saaj-impl-1.3.25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/stax-ex-1.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/stax2-api-3.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/streambuffer-1.5.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/lib/woodstox-core-asl-4.2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/sun-jaxws.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFS.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFSResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFSResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/CreateFile.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/CreateFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/CreateFileResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/CreateFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/DeleteFile.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/DeleteFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/DeleteFileResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/DeleteFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/DownloadFile.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/DownloadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/DownloadFileResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/DownloadFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FileOp.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FileOp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FindFileIsExit.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FindFileIsExit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FindFileIsExitResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FindFileIsExitResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoop.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoopResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoopResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetFileMetaData.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetFileMetaData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetFileMetaDataResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetFileMetaDataResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfs.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfsResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfsResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFile.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFileResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/HdfsFileByteArray.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/HdfsFileByteArray.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/IOException.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/IOException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/IOException_Exception.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/IOException_Exception.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/LoadFile.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/LoadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/LoadFileResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/LoadFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/ObjectFactory.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/ObjectFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/RenameFile.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/RenameFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/RenameFileResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/RenameFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/UploadFile.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/UploadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/UploadFileResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/UploadFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTime.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTimeResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTimeResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/package-info.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceClient/package-info.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceServer/FileOp.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceServer/FileOp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceServer/FileOpImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceServer/FileOpImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceServer/HDFSFileByteArray.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/WebServiceServer/HDFSFileByteArray.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/controller/FileInfoSubmitController.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/controller/FileInfoSubmitController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/controller/FileUploadController.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/controller/FileUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/IImageDailyService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/IImageDailyService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/IImageUploadService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/IImageUploadService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/IUserAccountService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/IUserAccountService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/ImageDailyServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/ImageDailyServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/ImageUploadServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/ImageUploadServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/Itif_schemaService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/Itif_schemaService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/UserAccountServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/UserAccountServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/tif_schemaServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/cgwx/webhdfs/service/tif_schemaServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/cgwx/webhdfs/service/TestIUserAccountService.class" afterPath="$PROJECT_DIR$/target/test-classes/com/cgwx/webhdfs/service/TestIUserAccountService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/cgwx/webhdfs/service/TestTifSchemaService.class" afterPath="$PROJECT_DIR$/target/test-classes/com/cgwx/webhdfs/service/TestTifSchemaService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFS.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFSResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/CreateDirOnHDFSResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/CreateFile.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/CreateFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/CreateFileResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/CreateFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/DeleteFile.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/DeleteFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/DeleteFileResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/DeleteFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/DownloadFile.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/DownloadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/DownloadFileResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/DownloadFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FileOp.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FileOp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FindFileIsExit.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FindFileIsExit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FindFileIsExitResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FindFileIsExitResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoop.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoopResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/FindLocationOnHadoopResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetFileMetaData.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetFileMetaData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetFileMetaDataResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetFileMetaDataResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfs.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfsResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetNodeMsgHdfsResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFile.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFileResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/GetUnderDirAllFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/HdfsFileByteArray.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/HdfsFileByteArray.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/IOException.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/IOException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/IOException_Exception.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/IOException_Exception.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/LoadFile.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/LoadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/LoadFileResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/LoadFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/ObjectFactory.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/ObjectFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/RenameFile.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/RenameFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/RenameFileResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/RenameFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/UploadFile.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/UploadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/UploadFileResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/UploadFileResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTime.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTimeResponse.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/WatchFileLastModifyTimeResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/package-info.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceClient/package-info.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceServer/FileOp.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceServer/FileOp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceServer/FileOpImpl.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceServer/FileOpImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceServer/HDFSFileByteArray.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/WebServiceServer/HDFSFileByteArray.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/controller/FileInfoSubmitController.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/controller/FileInfoSubmitController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/controller/FileUploadController.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/controller/FileUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/IImageDailyService.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/IImageDailyService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/IImageUploadService.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/IImageUploadService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/IUserAccountService.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/IUserAccountService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/ImageDailyServiceImpl.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/ImageDailyServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/ImageUploadServiceImpl.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/ImageUploadServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/Itif_schemaService.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/Itif_schemaService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/UserAccountServiceImpl.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/UserAccountServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/tif_schemaServiceImpl.class" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/com/cgwx/webhdfs/service/tif_schemaServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/web_hdfs_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/web_hdfs_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/hadoop.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hadoop.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceServer/FileOp.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceServer/FileOp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceServer/FileOpImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceServer/FileOpImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/controller/FileInfoSubmitController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/controller/FileInfoSubmitController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/controller/FileUploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/controller/FileUploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/IImageDailyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/IImageDailyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/IImageUploadService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/IImageUploadService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/IUserAccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/IUserAccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/ImageDailyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/ImageDailyServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/ImageUploadServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/ImageUploadServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/Itif_schemaService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/Itif_schemaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/UserAccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/UserAccountServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/tif_schemaServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/tif_schemaServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/common/dfshealth.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/common/dfshealth.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/common/explorer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/common/explorer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/common/fileupload.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/common/fileupload.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/fileupload.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/fileupload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/cgwx/webhdfs/service/TestIUserAccountService.java" afterPath="$PROJECT_DIR$/src/test/java/com/cgwx/webhdfs/service/TestIUserAccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/cgwx/webhdfs/service/TestTifSchemaService.java" afterPath="$PROJECT_DIR$/src/test/java/com/cgwx/webhdfs/service/TestTifSchemaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config.properties" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/config.properties" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/classes/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/web-hdfs/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/common/dfshealth.jsp" afterPath="$PROJECT_DIR$/target/web-hdfs/common/dfshealth.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/common/explorer.jsp" afterPath="$PROJECT_DIR$/target/web-hdfs/common/explorer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/common/fileupload.jsp" afterPath="$PROJECT_DIR$/target/web-hdfs/common/fileupload.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-hdfs/resources/js/fileupload.js" afterPath="$PROJECT_DIR$/target/web-hdfs/resources/js/fileupload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-hdfs.iml" afterPath="$PROJECT_DIR$/web-hdfs.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_10_b140802_1033.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_3_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/FsImageAdvanceMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/FsImageAdvanceMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/FsImageCatgegoryMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/FsImageCatgegoryMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/FsImageDailyMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/FsImageDailyMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/FsImageOtherMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/FsImageOtherMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/FsImageStandardMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/FsImageStandardMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/FsImageTilecutMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/FsImageTilecutMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/FsImageUploadMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/FsImageUploadMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/FsUserAccountMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/FsUserAccountMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/tif_schemaMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/dao/mysql/tif_schemaMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/FsImageAdvance.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/FsImageAdvance.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/FsImageCatgegory.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/FsImageCatgegory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/FsImageDaily.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/FsImageDaily.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/FsImageOther.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/FsImageOther.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/FsImageStandard.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/FsImageStandard.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/FsImageTilecut.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/FsImageTilecut.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/FsImageUpload.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/FsImageUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/FsUserAccount.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/FsUserAccount.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/tif_schema.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/model/mysql/tif_schema.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/FsImageAdvanceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/FsImageAdvanceMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/FsImageCatgegoryMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/FsImageCatgegoryMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/FsImageDailyMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/FsImageDailyMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/FsImageOtherMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/FsImageOtherMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/FsImageStandardMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/FsImageStandardMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/FsImageTilecutMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/FsImageTilecutMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/FsImageUploadMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/FsImageUploadMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/FsUserAccountMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/FsUserAccountMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/tif_schemaMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/mysql/tif_schemaMapper.xml" />
     </list>
     <ignored path="web-hdfs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -401,8 +40,8 @@
       <file leaf-file-name="ImageStoreServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/ImageStoreServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="213">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1764,7 +1403,7 @@
       <workItem from="1487570278761" duration="8306000" />
       <workItem from="1487578908236" duration="12091000" />
       <workItem from="1487639731968" duration="24006000" />
-      <workItem from="1487829437614" duration="27688000" />
+      <workItem from="1487829437614" duration="27781000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1483149122300</created>
@@ -1808,7 +1447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486881651277</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="20107-02-25">
+      <created>1487987471568</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1487987471568</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1844,7 +1490,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309783000" />
+    <option name="totallyTimeSpent" value="309876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -1926,7 +1572,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change" />
     <MESSAGE value="create project" />
-    <option name="LAST_COMMIT_MESSAGE" value="create project" />
+    <MESSAGE value="20107-02-25" />
+    <option name="LAST_COMMIT_MESSAGE" value="20107-02-25" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2297,28 +1944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/postgresql/HdfsImageStoreMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding>
-            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1487905761268" expanded="true" signature="2613:2736" ph="select from hdfs_image_store" />
-            <marker date="1487905761268" expanded="true" signature="2840:2994" ph="select from hdfs_image_store" />
-            <marker date="1487905761268" expanded="true" signature="3081:3158" ph="delete from " />
-            <marker date="1487905761268" expanded="true" signature="3264:3940" ph="insert into hdfs_image_store... " />
-            <marker date="1487905761268" expanded="true" signature="6234:7464" ph="update hdfs_... " />
-            <marker date="1487905761268" expanded="true" signature="7582:8241" ph="update hdfs_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/WebServiceServer/QueryOp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -2418,10 +2043,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgwx/webhdfs/mapper/postgresql/HdfsImageStoreMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1487905761268" expanded="true" signature="2613:2736" ph="select from hdfs_image_store" />
+            <marker date="1487905761268" expanded="true" signature="2840:2994" ph="select from hdfs_image_store" />
+            <marker date="1487905761268" expanded="true" signature="3081:3158" ph="delete from " />
+            <marker date="1487905761268" expanded="true" signature="3264:3940" ph="insert into hdfs_image_store... " />
+            <marker date="1487905761268" expanded="true" signature="6234:7464" ph="update hdfs_... " />
+            <marker date="1487905761268" expanded="true" signature="7582:8241" ph="update hdfs_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgwx/webhdfs/service/ImageStoreServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="213">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
