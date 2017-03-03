@@ -38,10 +38,8 @@ public class FileOpImpl implements FileOp {
     String rootPath = null;
     FileSystem coreSys = null;
 
-    int connectNum;
     public FileOpImpl() {
 
-        connectNum = 0;
         conf = new Configuration();//这里创建conf对象有一个默认参数，boolean loadDefaults，默认为true
         String path = this.getClass().getResource("/").getPath().substring(1, this.getClass().getResource("/").getPath().indexOf("classes"));
         String coreconf = path + "classes/config/core-site.xml";
@@ -174,9 +172,9 @@ public class FileOpImpl implements FileOp {
     }
     @WebMethod
     public boolean getNodeMsgHdfs()throws IOException{
-        connectNum++;
+
         SimpleDateFormat time=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println(time.format(new java.util.Date())+"  getNodeMsgHdfs请求"+ "       次数："+ connectNum);
+        System.out.println(time.format(new java.util.Date())+"  getNodeMsgHdfs请求");
         DistributedFileSystem distributedFileSystem=(DistributedFileSystem) coreSys;
         DatanodeInfo []dataInfos = distributedFileSystem.getDataNodeStats();
         for(int j=0;j<dataInfos.length;j++){
@@ -187,10 +185,8 @@ public class FileOpImpl implements FileOp {
     }
     @WebMethod
     public HDFSFileByteArray loadFile(String fileName)throws IOException{
-        connectNum++;
 
         SimpleDateFormat time=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println(time.format(new java.util.Date())+"  loadFile请求:"+fileName + "       次数："+ connectNum);
         HDFSFileByteArray fba = new HDFSFileByteArray();
         //InputStream in = coreSys.open(new Path(rootPath + fileName));
         try {
@@ -205,7 +201,9 @@ public class FileOpImpl implements FileOp {
             in.close();
         } catch (IOException e) {
             System.out.println(time.format(new java.util.Date())+"  loadFile请求:"+fileName + "       失败，HDFS系统中不存在该文件！");
+            return null;
         }
+        System.out.println(time.format(new java.util.Date())+"  loadFile请求:"+fileName + "       成功！");
         return fba;
     }
     @WebMethod

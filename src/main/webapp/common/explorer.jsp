@@ -1,22 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
-    Licensed to the Apache Software Foundation (ASF) under one or more
-    contributor license agreements.  See the NOTICE file distributed with
-    this work for additional information regarding copyright ownership.
-    The ASF licenses this file to You under the Apache License, Version 2.0
-    (the "License"); you may not use this file except in compliance with
-    the License.  You may obtain a copy of the License at
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-  -->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -30,9 +30,8 @@
 <header class="navbar navbar-inverse bs-docs-nav" role="banner">
     <div class="container">
         <div class="navbar-header">
-            <div class="navbar-brand">WEB-HDFS</div>
+            <div class="navbar-brand">Hadoop</div>
         </div>
-
         <ul class="nav navbar-nav" id="ui-tabs">
             <li><a href="dfshealth.jsp#tab-overview">概述</a></li>
             <li><a href="dfshealth.jsp#tab-datanode">数据节点</a></li>
@@ -40,7 +39,13 @@
             <li><a href="dfshealth.jsp#tab-startup-progress">启动过程</a></li>
             <li><a href="explorer.jsp">HDFS文件系统</a></li>
             <li><a href="logs">日志</a></li>
-            <li><a href="fileupload-group.jsp">文件上传</a></li>
+            <li class="dropdown">
+                <a href="##" class="dropdown-toggle" data-toggle="dropdown">文件上传<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="fileupload-group.jsp">单一文件上传</a></li>
+                    <li><a href="fileupload.jsp">多组文件上传</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </header>

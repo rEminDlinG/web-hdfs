@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cgwx.webhdfs.dao.postgresql.HdfsImageStoreMapper" >
+  <resultMap id="BaseResultMap" type="com.cgwx.webhdfs.model.postgresql.HdfsImageStore" >
+    <id column="image_id" property="imageId" jdbcType="INTEGER" />
+    <result column="image_upload_time" property="imageUploadTime" jdbcType="TIMESTAMP" />
+    <result column="image_category" property="imageCategory" jdbcType="VARCHAR" />
+    <result column="image_name" property="imageName" jdbcType="VARCHAR" />
+    <result column="image_category_extends2" property="imageCategoryExtends2" jdbcType="VARCHAR" />
+    <result column="image_geo" property="imageGeo" jdbcType="OTHER" />
+    <result column="image_geom" property="imageGeom" jdbcType="OTHER" />
+    <result column="image_file_path" property="imageFilePath" jdbcType="VARCHAR" />
+    <result column="image_max_level" property="imageMaxLevel" jdbcType="INTEGER" />
+    <result column="image_min_level" property="imageMinLevel" jdbcType="INTEGER" />
+    <result column="image_capture_time" property="imageCaptureTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="GeoResultMap" type="com.cgwx.webhdfs.model.postgresql.ImageStruct" >
+    <id column="image_id" property="imageId" jdbcType="INTEGER" />
+    <result column="image_category" property="imageCategory" jdbcType="VARCHAR" />
+    <result column="image_name" property="imageName" jdbcType="VARCHAR" />
+    <result column="image_category_extends2" property="imageCategoryExtends2" jdbcType="VARCHAR" />
+    <result column="geojason" property="imageGeo" jdbcType="VARCHAR" />
+    <result column="image_file_path" property="imageFilePath" jdbcType="VARCHAR" />
+    <result column="image_max_level" property="imageMaxLevel" jdbcType="INTEGER" />
+    <result column="image_min_level" property="imageMinLevel" jdbcType="INTEGER" />
+    <result column="image_capture_time" property="imageCaptureTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    image_id, image_upload_time, image_category, image_name, image_category_extends2, 
+    image_geo, image_geom, image_file_path, image_max_level, image_min_level, image_capture_time
+  </sql>
+  <sql id="Geo_Column_list" >
+    image_id,image_category, image_name, image_category_extends2,image_file_path, image_max_level, image_min_level, image_capture_time,st_asgeojson(image_geo,15,0) as geojason
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hdfs_image_store
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByGeo" resultMap="GeoResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Geo_Column_list" />
+   from hdfs_image_store
+    where st_intersects(st_geomfromgeojson( #{imageGeo,jdbcType=OTHER}),image_geo)
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hdfs_image_store
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cgwx.webhdfs.model.postgresql.HdfsImageStore" >
+    insert into hdfs_image_store (image_id, image_upload_time, image_category, 
+      image_name, image_category_extends2, image_geo, 
+      image_geom, image_file_path, image_max_level, 
+      image_min_level, image_capture_time)
+    values (#{imageId,jdbcType=INTEGER}, #{imageUploadTime,jdbcType=TIMESTAMP}, #{imageCategory,jdbcType=VARCHAR}, 
+      #{imageName,jdbcType=VARCHAR}, #{imageCategoryExtends2,jdbcType=VARCHAR}, st_geomfromgeojson(#{imageGeo,jdbcType=OTHER}),
+      st_geomfromgeojson(#{imageGeom,jdbcType=OTHER}), #{imageFilePath,jdbcType=VARCHAR}, #{imageMaxLevel,jdbcType=INTEGER},
+      #{imageMinLevel,jdbcType=INTEGER}, #{imageCaptureTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cgwx.webhdfs.model.postgresql.HdfsImageStore" >
+    insert into hdfs_image_store
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="imageId != null" >
+        image_id,
+      </if>
+      <if test="imageUploadTime != null" >
+        image_upload_time,
+      </if>
+      <if test="imageCategory != null" >
+        image_category,
+      </if>
+      <if test="imageName != null" >
+        image_name,
+      </if>
+      <if test="imageCategoryExtends2 != null" >
+        image_category_extends2,
+      </if>
+      <if test="imageGeo != null" >
+        image_geo,
+      </if>
+      <if test="imageGeom != null" >
+        image_geom,
+      </if>
+      <if test="imageFilePath != null" >
+        image_file_path,
+      </if>
+      <if test="imageMaxLevel != null" >
+        image_max_level,
+      </if>
+      <if test="imageMinLevel != null" >
+        image_min_level,
+      </if>
+      <if test="imageCaptureTime != null" >
+        image_capture_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="imageId != null" >
+        #{imageId,jdbcType=INTEGER},
+      </if>
+      <if test="imageUploadTime != null" >
+        #{imageUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageCategory != null" >
+        #{imageCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="imageName != null" >
+        #{imageName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageCategoryExtends2 != null" >
+        #{imageCategoryExtends2,jdbcType=VARCHAR},
+      </if>
+      <if test="imageGeo != null" >
+        #{imageGeo,jdbcType=OTHER},
+      </if>
+      <if test="imageGeom != null" >
+        #{imageGeom,jdbcType=OTHER},
+      </if>
+      <if test="imageFilePath != null" >
+        #{imageFilePath,jdbcType=VARCHAR},
+      </if>
+      <if test="imageMaxLevel != null" >
+        #{imageMaxLevel,jdbcType=INTEGER},
+      </if>
+      <if test="imageMinLevel != null" >
+        #{imageMinLevel,jdbcType=INTEGER},
+      </if>
+      <if test="imageCaptureTime != null" >
+        #{imageCaptureTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cgwx.webhdfs.model.postgresql.HdfsImageStore" >
+    update hdfs_image_store
+    <set >
+      <if test="imageUploadTime != null" >
+        image_upload_time = #{imageUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageCategory != null" >
+        image_category = #{imageCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="imageName != null" >
+        image_name = #{imageName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageCategoryExtends2 != null" >
+        image_category_extends2 = #{imageCategoryExtends2,jdbcType=VARCHAR},
+      </if>
+      <if test="imageGeo != null" >
+        image_geo = #{imageGeo,jdbcType=OTHER},
+      </if>
+      <if test="imageGeom != null" >
+        image_geom = #{imageGeom,jdbcType=OTHER},
+      </if>
+      <if test="imageFilePath != null" >
+        image_file_path = #{imageFilePath,jdbcType=VARCHAR},
+      </if>
+      <if test="imageMaxLevel != null" >
+        image_max_level = #{imageMaxLevel,jdbcType=INTEGER},
+      </if>
+      <if test="imageMinLevel != null" >
+        image_min_level = #{imageMinLevel,jdbcType=INTEGER},
+      </if>
+      <if test="imageCaptureTime != null" >
+        image_capture_time = #{imageCaptureTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cgwx.webhdfs.model.postgresql.HdfsImageStore" >
+    update hdfs_image_store
+    set image_upload_time = #{imageUploadTime,jdbcType=TIMESTAMP},
+      image_category = #{imageCategory,jdbcType=VARCHAR},
+      image_name = #{imageName,jdbcType=VARCHAR},
+      image_category_extends2 = #{imageCategoryExtends2,jdbcType=VARCHAR},
+      image_geo = #{imageGeo,jdbcType=OTHER},
+      image_geom = #{imageGeom,jdbcType=OTHER},
+      image_file_path = #{imageFilePath,jdbcType=VARCHAR},
+      image_max_level = #{imageMaxLevel,jdbcType=INTEGER},
+      image_min_level = #{imageMinLevel,jdbcType=INTEGER},
+      image_capture_time = #{imageCaptureTime,jdbcType=TIMESTAMP}
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </update>
+</mapper>
