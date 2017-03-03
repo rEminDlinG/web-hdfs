@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cgwx.webhdfs.dao.postgresql.HdfsImageUploadMapper" >
+  <resultMap id="BaseResultMap" type="com.cgwx.webhdfs.model.postgresql.HdfsImageUpload" >
+    <id column="image_id" property="imageId" jdbcType="INTEGER" />
+    <result column="upload_user_id" property="uploadUserId" jdbcType="VARCHAR" />
+    <result column="upload_user_name" property="uploadUserName" jdbcType="VARCHAR" />
+    <result column="image_upload_time" property="imageUploadTime" jdbcType="TIMESTAMP" />
+    <result column="image_category" property="imageCategory" jdbcType="VARCHAR" />
+    <result column="image_category_extends1" property="imageCategoryExtends1" jdbcType="VARCHAR" />
+    <result column="image_category_extends2" property="imageCategoryExtends2" jdbcType="VARCHAR" />
+    <result column="image_file_path" property="imageFilePath" jdbcType="VARCHAR" />
+    <result column="cut_state" property="cutState" jdbcType="BIT" />
+    <result column="image_capture_time" property="imageCaptureTime" jdbcType="TIMESTAMP" />
+    <result column="image_description" property="imageDescription" jdbcType="VARCHAR" />
+    <result column="image_size" property="imageSize" jdbcType="BIGINT" />
+    <result column="image_name" property="imageName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    image_id, upload_user_id, upload_user_name, image_upload_time, image_category, image_category_extends1, 
+    image_category_extends2, image_file_path, cut_state, image_capture_time, image_description, 
+    image_size, image_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hdfs_image_upload
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hdfs_image_upload
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cgwx.webhdfs.model.postgresql.HdfsImageUpload" >
+    insert into hdfs_image_upload (upload_user_id, upload_user_name,
+      image_upload_time, image_category, image_category_extends1, 
+      image_category_extends2, image_file_path, cut_state, 
+      image_capture_time, image_description, image_size, 
+      image_name)
+    values (#{uploadUserId,jdbcType=VARCHAR}, #{uploadUserName,jdbcType=VARCHAR},
+      #{imageUploadTime,jdbcType=TIMESTAMP}, #{imageCategory,jdbcType=VARCHAR}, #{imageCategoryExtends1,jdbcType=VARCHAR}, 
+      #{imageCategoryExtends2,jdbcType=VARCHAR}, #{imageFilePath,jdbcType=VARCHAR}, #{cutState,jdbcType=BIT}, 
+      #{imageCaptureTime,jdbcType=TIMESTAMP}, #{imageDescription,jdbcType=VARCHAR}, #{imageSize,jdbcType=BIGINT}, 
+      #{imageName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cgwx.webhdfs.model.postgresql.HdfsImageUpload" >
+    insert into hdfs_image_upload
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="imageId != null" >
+        image_id,
+      </if>
+      <if test="uploadUserId != null" >
+        upload_user_id,
+      </if>
+      <if test="uploadUserName != null" >
+        upload_user_name,
+      </if>
+      <if test="imageUploadTime != null" >
+        image_upload_time,
+      </if>
+      <if test="imageCategory != null" >
+        image_category,
+      </if>
+      <if test="imageCategoryExtends1 != null" >
+        image_category_extends1,
+      </if>
+      <if test="imageCategoryExtends2 != null" >
+        image_category_extends2,
+      </if>
+      <if test="imageFilePath != null" >
+        image_file_path,
+      </if>
+      <if test="cutState != null" >
+        cut_state,
+      </if>
+      <if test="imageCaptureTime != null" >
+        image_capture_time,
+      </if>
+      <if test="imageDescription != null" >
+        image_description,
+      </if>
+      <if test="imageSize != null" >
+        image_size,
+      </if>
+      <if test="imageName != null" >
+        image_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="imageId != null" >
+        #{imageId,jdbcType=INTEGER},
+      </if>
+      <if test="uploadUserId != null" >
+        #{uploadUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadUserName != null" >
+        #{uploadUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUploadTime != null" >
+        #{imageUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageCategory != null" >
+        #{imageCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="imageCategoryExtends1 != null" >
+        #{imageCategoryExtends1,jdbcType=VARCHAR},
+      </if>
+      <if test="imageCategoryExtends2 != null" >
+        #{imageCategoryExtends2,jdbcType=VARCHAR},
+      </if>
+      <if test="imageFilePath != null" >
+        #{imageFilePath,jdbcType=VARCHAR},
+      </if>
+      <if test="cutState != null" >
+        #{cutState,jdbcType=BIT},
+      </if>
+      <if test="imageCaptureTime != null" >
+        #{imageCaptureTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageDescription != null" >
+        #{imageDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="imageSize != null" >
+        #{imageSize,jdbcType=BIGINT},
+      </if>
+      <if test="imageName != null" >
+        #{imageName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cgwx.webhdfs.model.postgresql.HdfsImageUpload" >
+    update hdfs_image_upload
+    <set >
+      <if test="uploadUserId != null" >
+        upload_user_id = #{uploadUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadUserName != null" >
+        upload_user_name = #{uploadUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUploadTime != null" >
+        image_upload_time = #{imageUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageCategory != null" >
+        image_category = #{imageCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="imageCategoryExtends1 != null" >
+        image_category_extends1 = #{imageCategoryExtends1,jdbcType=VARCHAR},
+      </if>
+      <if test="imageCategoryExtends2 != null" >
+        image_category_extends2 = #{imageCategoryExtends2,jdbcType=VARCHAR},
+      </if>
+      <if test="imageFilePath != null" >
+        image_file_path = #{imageFilePath,jdbcType=VARCHAR},
+      </if>
+      <if test="cutState != null" >
+        cut_state = #{cutState,jdbcType=BIT},
+      </if>
+      <if test="imageCaptureTime != null" >
+        image_capture_time = #{imageCaptureTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imageDescription != null" >
+        image_description = #{imageDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="imageSize != null" >
+        image_size = #{imageSize,jdbcType=BIGINT},
+      </if>
+      <if test="imageName != null" >
+        image_name = #{imageName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cgwx.webhdfs.model.postgresql.HdfsImageUpload" >
+    update hdfs_image_upload
+    set upload_user_id = #{uploadUserId,jdbcType=VARCHAR},
+      upload_user_name = #{uploadUserName,jdbcType=VARCHAR},
+      image_upload_time = #{imageUploadTime,jdbcType=TIMESTAMP},
+      image_category = #{imageCategory,jdbcType=VARCHAR},
+      image_category_extends1 = #{imageCategoryExtends1,jdbcType=VARCHAR},
+      image_category_extends2 = #{imageCategoryExtends2,jdbcType=VARCHAR},
+      image_file_path = #{imageFilePath,jdbcType=VARCHAR},
+      cut_state = #{cutState,jdbcType=BIT},
+      image_capture_time = #{imageCaptureTime,jdbcType=TIMESTAMP},
+      image_description = #{imageDescription,jdbcType=VARCHAR},
+      image_size = #{imageSize,jdbcType=BIGINT},
+      image_name = #{imageName,jdbcType=VARCHAR}
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -30,6 +30,7 @@ public class QueryOpImpl extends SpringBeanAutowiringSupport implements QueryOp 
 
         JSONObject jsonObject = JSONObject.fromObject(jsonString);
         System.out.println("jsonObject：" + jsonObject);
+
         int ImageCatagory = jsonObject.getInt("ImageCatagory");
         String ImageStartDate = jsonObject.getString("ImageStartDate");
         String ImageEndDate = jsonObject.getString("ImageEndDate");
@@ -40,6 +41,10 @@ public class QueryOpImpl extends SpringBeanAutowiringSupport implements QueryOp 
         System.out.println(ImageGeo);
         List<ImageStruct> imageStructList = imageStoreService.selectByGeo(ImageGeo);
         JSONArray jsonObject1 = new JSONArray();
+        if (imageStructList.isEmpty() == true)
+        {
+            return "no object found......hahahahaha";
+        }
         for (ImageStruct a : imageStructList)
         {
             JSONObject jo = new JSONObject();

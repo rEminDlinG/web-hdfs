@@ -1,6 +1,6 @@
 package com.cgwx.webhdfs.controller;
 
-import com.cgwx.webhdfs.WebServiceClient.*;
+import com.cgwx.webhdfs.dto.Response;
 import com.cgwx.webhdfs.model.mysql.FsImageDaily;
 import com.cgwx.webhdfs.model.mysql.FsImageUpload;
 import com.cgwx.webhdfs.model.postgresql.HdfsImageUpload;
@@ -18,36 +18,20 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
-
-import com.cgwx.webhdfs.dto.Response;
-import org.springframework.web.context.support.SpringBeanAutowiringSupport;
-
 @Controller
 @RequestMapping("/FileInfoSubmit")
-public class FileInfoSubmitController  {
+public class FileInfoSubmitController {
 
     @Autowired
     private IImageUploadService imageUploadService;
     @Autowired
     private IImageDailyService imageDailyService;
-
     @ResponseBody
     @RequestMapping("/SubmitAction")
     public Response SubmitInfos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         Response opResult = new Response();
-        //temp
-        QueryOpService queryOpService = new QueryOpService();
-        QueryOp queryOp = queryOpService.getPort(QueryOp.class);
 
-        try {
-            List<ImageStruct> hdfsImageStoreList = queryOp.selectByImgGeo("{\"ImageCatagory\":\"1\",\"ImageStartDate\":\"2016-02-21\",\"ImageEndDate\":\"2016-02-21\",\"ImageGeo\":{\"type\":\"Polygon\",\"coordinates\":[[[116.3676,39.8889],[116.5101,39.8887],[116.3679,39.8268],[116.5102,39.8268]]]}}");
-            System.out.println(hdfsImageStoreList.size());
-
-        } catch (IOException_Exception e) {
-            e.printStackTrace();
-        }
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
 
@@ -56,12 +40,6 @@ public class FileInfoSubmitController  {
         String fileType = request.getParameter("fileType");
         String introduceContent = request.getParameter("introduceContent");
         String typeAttr = request.getParameter("typeAttr");
-
-        System.out.println(uploadFileName);
-        System.out.println(uploadDirectory);
-        System.out.println(fileType);
-        System.out.println(introduceContent);
-        System.out.println(typeAttr);
 
         String uploadFilePath = "/user/hadoop/uploadFiles/" + uploadFileName;
 
@@ -83,15 +61,73 @@ public class FileInfoSubmitController  {
         fsImageUpload.setImageDescription(introduceContent);
 
         int result = imageUploadService.insert(fsImageUpload);
+//        System.out.println(result);
 
-        System.out.println(result);
         if (fileType.equals("Daily")) {
             FsImageDaily fsImageDaily = new FsImageDaily();
             fsImageDaily.setImageId(10086);
             fsImageDaily.setArgs1("typeAttr");
             result = imageDailyService.insert(fsImageDaily);
-            System.out.println(result);
 
+
+        }
+        opResult.setResult("success");
+        return opResult;
+    }
+    @ResponseBody
+    @RequestMapping("/SubmitGroup")
+    public Response SubmitGroup(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        Response opResult = new Response();
+
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        String count=request.getParameter("count");
+        int size=Integer.parseInt(count);
+        System.out.println(size);
+
+        for(int i=0;i<size;i++) {
+            String uploadFileName = request.getParameter("uploadFileName"+i);
+            String uploadDirectory = request.getParameter("uploadDirectory"+i);
+            String fileType = request.getParameter("fileType"+i);
+            String introduceContent = request.getParameter("introduceContent"+i);
+            String typeAttr = request.getParameter("typeAttr"+i);
+
+            System.out.println(uploadFileName);
+            System.out.println(uploadDirectory);
+            System.out.println(fileType);
+            System.out.println(introduceContent);
+            System.out.println(typeAttr);
+
+            String uploadFilePath = "/user/hadoop/uploadFiles/" + uploadFileName;
+
+            try {
+                Date date=new Date();
+                DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String time=format.format(date);
+                String date1 = new java.text.SimpleDateFormat("yyyyMMddHHmmss").format(new java.util.Date());
+                HdfsImageUpload hdfsImageUpload= new HdfsImageUpload();
+                hdfsImageUpload.setImageId(13);
+                hdfsImageUpload.setUploadUserId("Jerry");
+                hdfsImageUpload.setUploadUserName("Jerry");
+                hdfsImageUpload.setImageUploadTime(date);
+                hdfsImageUpload.setImageCategory("1");
+                hdfsImageUpload.setImageCategoryExtends1("Jerry");
+                hdfsImageUpload.setImageCategoryExtends2("Jerry");
+                hdfsImageUpload.setImageFilePath(uploadFilePath);
+                hdfsImageUpload.setCutState(false);
+                hdfsImageUpload.setImageCaptureTime(null);
+                hdfsImageUpload.setImageDescription(introduceContent);
+                hdfsImageUpload.setImageSize(0L);
+                hdfsImageUpload.setImageName(uploadFileName);
+
+                int result = imageUploadService.insert(hdfsImageUpload);
+
+                System.out.println("Table created successfully");
+            } catch (Exception e) {
+                System.err.println(e.getClass().getName() + ": " + e.getMessage());
+                System.exit(0);
+            }
         }
         opResult.setResult("success");
         return opResult;

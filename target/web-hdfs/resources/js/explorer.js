@@ -125,7 +125,6 @@
 
     $.get(url).done(function(data) {
 
-
       var d = get_response(data, "LocatedBlocks");
       if (d === null) {
         show_err_msg(get_response_err_msg(data));
@@ -216,6 +215,7 @@
         return chunk.write('' + new Date(Number(value)).toLocaleString());
       }
     };
+    console.log(HELPERS);
     var url = server_url_head + '/webhdfs/v1' + encode_path(dir) + '?op=LISTSTATUS';
     $.get(url, function(data) {
       var d = get_response(data, "FileStatuses");
@@ -225,11 +225,13 @@
         return;
       }
       console.log(data);
+      console.log(d);
       current_directory = dir;
       $('#directory').val(dir);
       window.location.hash = dir;
       var base = dust.makeBase(HELPERS);
-      dust.render('explorer', base.push(d), function(err, out) {
+      dust.render('explorer', base.push(d), function(err, out) {   //此处解析jason字符串并生成界面显示信息，提交html.out
+        console.log(out);
         $('#panel').html(out);
 
         $('.explorer-browse-links').click(function() {
